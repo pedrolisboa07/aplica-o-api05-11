@@ -3,23 +3,24 @@ name: CI - Teste da aplicação
 
 'on':
   push:
-    branches:
-      - main
-
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   teste:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: "passo 03 -api"
+
     steps:
       - name: Baixar código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
