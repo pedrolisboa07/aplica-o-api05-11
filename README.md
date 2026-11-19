@@ -4,4 +4,4 @@ RA:199246
 
 
 
-![Uploading Captura de tela 2026-11-19 085046.png…]()
+<img width="1341" height="674" alt="Captura de tela 2026-11-19 085046" src="https://github.com/user-attachments/assets/a0a94d98-224a-4fe0-946b-5b22ce8a743d" />
