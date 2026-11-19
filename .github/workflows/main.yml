@@ -11,10 +11,6 @@ jobs:
   teste:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: "passo 03 -api"
-
     steps:
       - name: Baixar código
         uses: actions/checkout@v5
@@ -26,8 +22,11 @@ jobs:
 
       - name: Instalar dependências
         run: |
+          cd "passo 03 -api"
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Executar testes
-        run: python -m unittest discover -s tests -v
+        run: |
+          cd "passo 03 -api"
+          python -m unittest discover -s tests -v
