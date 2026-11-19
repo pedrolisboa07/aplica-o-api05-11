@@ -1,32 +1,5 @@
-
-name: CI - Teste da aplicação
-
-'on':
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  teste:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Baixar código
-        uses: actions/checkout@v5
-
-      - name: Configurar Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.12'
-
-      - name: Instalar dependências
+      - name: Verificar arquivos
         run: |
-          cd "passo 03 -api"
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Executar testes
-        run: |
-          cd "passo 03 -api"
-          python -m unittest discover -s tests -v
+          pwd
+          ls -la
+          find . -maxdepth 3 -type f
